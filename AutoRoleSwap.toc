@@ -1,0 +1,22 @@
+## Interface: 11505
+## Title: AutoRoleSwap
+## Notes: Automatically apply and keep the chosen role per specialization.
+## Author: Xin4rius
+## Version: 1.0.0
+## SavedVariablesPerCharacter: AutoRoleSwapDB
+
+Libs\LibDBIcon-1.0\embeds.xml
+
+Locales\enUS.lua
+Locales\frFR.lua
+Locales\deDE.lua
+Locales\esES.lua
+Locales\ruRU.lua
+Locales\itIT.lua
+Locales\ptBR.lua
+Locales\koKR.lua
+Locales\zhCN.lua
+Locales\zhTW.lua
+
+AutoRoleSwap.lua
+MinimapButton.lua
