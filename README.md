@@ -7,7 +7,7 @@
 - 🔄 **Automatic Role Swapping**: The addon detects your specialization changes and instantly applies the last role you selected for that spec.
 - 🔒 **Role Locking**: A lock feature prevents unwanted role changes (e.g., from LFG overrides).
 - 🖱️ **Minimap Button**: A convenient button to toggle the lock with a single click and see the current status at a glance.
-- 🌍 **Multi-Language Support**: Full support for many languages including English, French, German, Spanish, Russian, and more.
+- 🌍 **Multi-Language Support**: Supports many languages including English, French, German, Spanish, Russian, and more. *Note: Translations have not been fully tested; please feel free to open an issue if you encounter any bugs.*
 - 🤝 **LFG Integration**: Smart sync with the roles selected in the Group Finder tool.
 
 ## 🚀 Usage
