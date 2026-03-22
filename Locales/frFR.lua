@@ -15,3 +15,4 @@ L["tooltip_click_toggle"] = "\nClic gauche: |cffffffffVerrouiller / Déverrouill
 L["tooltip_drag_move"] = "Clic gauche maintenu: |cffffffffDéplacer l'icône|r"
 L["status_locked"] = "Verrouillé"
 L["status_unlocked"] = "Déverrouillé"
+L["talents_button_tooltip"] = "Clic gauche: \n|cffffffffChoisir le rôle / Verrouiller|r"

@@ -2,7 +2,7 @@
 ## Title: AutoRoleSwap
 ## Notes: Automatically apply and keep the chosen role per specialization.
 ## Author: Xin4rius
-## Version: 1.0.0
+## Version: 2.0.0
 ## SavedVariablesPerCharacter: AutoRoleSwapDB
 
 Libs\LibDBIcon-1.0\embeds.xml
@@ -18,5 +18,7 @@ Locales\koKR.lua
 Locales\zhCN.lua
 Locales\zhTW.lua
 
+Utils.lua
 AutoRoleSwap.lua
 MinimapButton.lua
+TalentsUI.lua

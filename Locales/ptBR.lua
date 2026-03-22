@@ -15,3 +15,4 @@ L["tooltip_click_toggle"] = "\nClique esquerdo: |cffffffffBloquear / Desbloquear
 L["tooltip_drag_move"] = "Clique esquerdo e arraste: |cffffffffMover ícone|r"
 L["status_locked"] = "Bloqueado"
 L["status_unlocked"] = "Desbloqueado"
+L["talents_button_tooltip"] = "Botão esquerdo: \n|cffffffffEscolher Função / Bloquear|r"

@@ -1,21 +1,8 @@
 local addonName, addonTable = ...
 local L = addonTable.L
 
-local function ARCPrint(text, hexColor)
-    if not text then return end
-    hexColor = hexColor or "ffffffff"
-    -- Remove the localized text prefix if present
-    text = string.gsub(text, "^AutoRoleSwap%s*:%s*", "")
-    -- Format and print
-    print("|cff00ccff[AutoRoleSwap]|r |cff" .. hexColor .. text .. "|r")
-end
-
-local function GetLocalizedRoleName(role)
-    if role == "TANK" then return L["ROLE_TANK"] or "Tank" end
-    if role == "HEALER" then return L["ROLE_HEALER"] or "Healer" end
-    if role == "DAMAGER" then return L["ROLE_DAMAGER"] or "Damager" end
-    return role
-end
+local ARSPrint = addonTable.ARSPrint
+local GetLocalizedRoleName = addonTable.GetLocalizedRoleName
 
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_LOGIN")
@@ -64,18 +51,18 @@ SlashCmdList["AUTOROLESWAP"] = function(msg)
             AutoRoleSwapDB[lockKey] = not AutoRoleSwapDB[lockKey]
             if AutoRoleSwapDB[lockKey] then
                 local msg = L["locked"]
-                if msg then ARCPrint(msg, "ff4444") end -- Red for locked
+                if msg then ARSPrint(msg, "ff4444") end -- Red for locked
                 ApplySavedRole(true)
                 if addonTable.UpdateMinimapButton then addonTable.UpdateMinimapButton() end
             else
                 local msg = L["unlocked"]
-                if msg then ARCPrint(msg, "44ff44") end -- Green for unlocked
+                if msg then ARSPrint(msg, "44ff44") end -- Green for unlocked
                 if addonTable.UpdateMinimapButton then addonTable.UpdateMinimapButton() end
             end
         end
     else
         local msg = L["help"]
-        if msg then ARCPrint(msg, "cccccc") end -- Gray for help
+        if msg then ARSPrint(msg, "cccccc") end -- Gray for help
     end
 end
 
@@ -104,7 +91,7 @@ local function UpdateRoleFromLFG()
             AutoRoleSwapDB[specID] = newRole
             UnitSetRole("player", newRole)
             local msg = L["role_restored"]
-            if msg then ARCPrint(string.format(msg, "|cffffd100" .. GetLocalizedRoleName(newRole) .. "|r"), "ffff00") end -- Yellow
+            if msg then ARSPrint(string.format(msg, "|cffffd100" .. GetLocalizedRoleName(newRole) .. "|r"), "ffff00") end -- Yellow
         end
     end
 end
@@ -125,7 +112,7 @@ local function HookRoleChanges()
                     lastManualChange = GetTime() -- Met à jour pour bloquer les apply indésirables pendant 2s
                     UnitSetRole("player", savedRole)
                     local msg = L["role_blocked"]
-                    if msg then ARCPrint(string.format(msg, "|cffffd100" .. GetLocalizedRoleName(savedRole) .. "|r"), "ff8800") end -- Orange
+                    if msg then ARSPrint(string.format(msg, "|cffffd100" .. GetLocalizedRoleName(savedRole) .. "|r"), "ff8800") end -- Orange
                     return
                 end
                 
@@ -157,7 +144,7 @@ ApplySavedRole = function(force)
         UnitSetRole("player", savedRole)
         
         local msg = L["role_restored"]
-        if msg then ARCPrint(string.format(msg, "|cffffd100" .. GetLocalizedRoleName(savedRole) .. "|r"), "ffff00") end -- Yellow
+        if msg then ARSPrint(string.format(msg, "|cffffd100" .. GetLocalizedRoleName(savedRole) .. "|r"), "ffff00") end -- Yellow
     end
     
     if addonTable.UpdateMinimapButton then addonTable.UpdateMinimapButton() end
