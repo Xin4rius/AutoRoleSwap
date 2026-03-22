@@ -15,3 +15,4 @@ L["tooltip_click_toggle"] = "\nЛевый клик: |cffffffffЗаблокиро
 L["tooltip_drag_move"] = "Левый клик и перетаскивание: |cffffffffПереместить значок|r"
 L["status_locked"] = "Заблокировано"
 L["status_unlocked"] = "Разблокировано"
+L["talents_button_tooltip"] = "Левый клик: \n|cffffffffВыбрать роль / Заблокировать|r"
